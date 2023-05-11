@@ -25,7 +25,7 @@ def upload_torchies(x, y, repo_name, is_safetensor):
 
 threads = []
 
-for i = 1 to file_nbr:
+for i in range(1, file_nbr):
     threads.append(threading.Thread(upload_torchies, [i, file_nbr, repo_name]))
   
 if (is_safetensor):
