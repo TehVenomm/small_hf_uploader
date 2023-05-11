@@ -14,14 +14,14 @@ def upload_torchies(x, y, repo_name, is_safetensor):
             path_in_repo=f"model-0000{x}-of-0000{y}.safetensors",
             repo_id=repo_name,
             repo_type="model",
-    )
+        )
     else:
-    api.upload_file(
-        path_or_fileobj=f"./pytorch_model-0000{x}-of-0000{y}.bin",
-        path_in_repo=f"pytorch_model-0000{x}-of-0000{y}.bin",
-        repo_id=repo_name,
-        repo_type="model",
-    )
+        api.upload_file(
+            path_or_fileobj=f"./pytorch_model-0000{x}-of-0000{y}.bin",
+            path_in_repo=f"pytorch_model-0000{x}-of-0000{y}.bin",
+            repo_id=repo_name,
+            repo_type="model",
+        )
 
 threads = []
 
